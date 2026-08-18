@@ -86,7 +86,9 @@
     "r2_name": "Mati K",
     "r2_source": "Google Play",
     "reviews_note": "Opinie ze sklepów App Store i Google Play.",
-    "stars_alt": "5 na 5 gwiazdek"
+    "stars_alt": "5 na 5 gwiazdek",
+    "share_btn": "Udostępnij link do aplikacji",
+    "share_text": "Zwiedzaj Dolny Śląsk — mobilny przewodnik historyczny z rekonstrukcjami 3D. Bezpłatnie na iOS i Androida:"
   },
   "en": {
     "path": "/en",
@@ -175,7 +177,9 @@
     "r2_name": "Mati K",
     "r2_source": "Google Play",
     "reviews_note": "Reviews from the App Store and Google Play, translated from Polish.",
-    "stars_alt": "5 out of 5 stars"
+    "stars_alt": "5 out of 5 stars",
+    "share_btn": "Share the app link",
+    "share_text": "Zwiedzaj Dolny Śląsk — Lower Silesia history guide with 3D reconstructions. Free on iOS and Android:"
   },
   "de": {
     "path": "/de",
@@ -264,6 +268,8 @@
     "r2_name": "Mati K",
     "r2_source": "Google Play",
     "reviews_note": "Bewertungen aus dem App Store und Google Play, aus dem Polnischen übersetzt.",
-    "stars_alt": "5 von 5 Sternen"
+    "stars_alt": "5 von 5 Sternen",
+    "share_btn": "App-Link teilen",
+    "share_text": "Zwiedzaj Dolny Śląsk — Geschichts-Guide für Niederschlesien mit 3D-Rekonstruktionen. Kostenlos für iOS und Android:"
   }
 }

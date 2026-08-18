@@ -193,6 +193,9 @@ section{padding:clamp(3rem,7vw,5.5rem) 0}
 .qr-big i:nth-child(4){bottom:-.7rem;right:-.7rem;border-left:0;border-top:0}
 .qr-cap{text-align:center;margin-top:1rem;font-family:var(--caps);font-size:.7rem;letter-spacing:.18em;color:var(--gold)}
 .qr-cap a{text-decoration:none}
+.share{display:none;margin-top:1.4rem;padding:.7rem 1.2rem;border:1px solid var(--gold);border-radius:999px;background:transparent;color:var(--paper);font:500 .95rem var(--sans);cursor:pointer;align-items:center;gap:.6rem}
+.share svg{width:1.1rem;height:1.1rem}
+.share:hover{background:rgba(196,154,60,.15)}
 
 /* footer */
 footer{padding:2.4rem 0 3rem;font-size:.9rem;color:var(--ink-2)}
@@ -215,7 +218,8 @@ footer .brand{font-size:.78rem}
   body::before{display:none}
   .top{backdrop-filter:none;-webkit-backdrop-filter:none;background:rgba(244,236,216,.96)}
   .phone.a,.phone.b,.phones .seal svg.ring{animation:none}
-  .qr-card{display:none}
+  .qr-card{width:100%}
+  .qr-card img{width:6.5rem;height:6.5rem}
   .features .grid{grid-template-columns:1fr}
   .features .grid .card:nth-child(even){margin-top:0}
   .route{grid-template-columns:1fr;gap:1.6rem;padding-left:0}
@@ -383,6 +387,7 @@ footer .brand{font-size:.78rem}
         <a href="https://apps.apple.com/pl/app/id6783342409" rel="noopener"><img src="/img/badge-appstore-{{lang}}.svg" alt="{{badge_appstore_alt}}" width="156" height="52"></a>
         <a href="https://play.google.com/store/apps/details?id=com.pdw.zds&hl={{lang}}" rel="noopener"><img class="play" src="/img/badge-play-{{lang}}.png" alt="{{badge_play_alt}}" width="646" height="250"></a>
       </div>
+      <button class="share" type="button" id="share"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="m8.6 13.5 6.8 4M15.4 6.5l-6.8 4"/></svg>{{share_btn}}</button>
     </div>
     <div class="qr-wrap">
       <div class="qr-big"><i></i><i></i><i></i><i></i><img src="/qr/zwiedzajdolnyslask-app.svg" alt="{{qr_alt}}" width="41" height="41"></div>
@@ -391,6 +396,14 @@ footer .brand{font-size:.78rem}
   </div>
 </section>
 </main>
+<script>
+if (navigator.share) {
+  var b = document.getElementById("share"); b.style.display = "inline-flex";
+  b.addEventListener("click", function () {
+    navigator.share({ title: "Zwiedzaj Dolny Śląsk", text: "{{share_text}}", url: "https://zwiedzajdolnyslask.pl/app" }).catch(function () {});
+  });
+}
+</script>
 
 <footer>
   <div class="wrap">
