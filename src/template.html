@@ -24,7 +24,7 @@
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Alegreya+Sans:ital,wght@0,400;0,500;0,700;1,400&family=Cinzel:wght@500;700&family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@400;700&family=Cinzel:wght@700&family=Cormorant+Garamond:ital,wght@0,600;1,500&display=swap" rel="stylesheet">
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"MobileApplication","name":"Zwiedzaj Dolny Śląsk","operatingSystem":"iOS, Android","applicationCategory":"TravelApplication","offers":{"@type":"Offer","price":"0","priceCurrency":"PLN"},"author":{"@type":"Organization","name":"PDW Sp. z o.o.","url":"https://zwiedzajdolnyslask.pl/"},"installUrl":["https://apps.apple.com/pl/app/id6783342409","https://play.google.com/store/apps/details?id=com.pdw.zds"],"image":"https://zwiedzajdolnyslask.pl/img/icon-512.png","description":"{{metaDescription}}"}
 </script>
@@ -208,9 +208,13 @@ footer .brand{font-size:.78rem}
   .phone{width:clamp(10rem,32vw,13.5rem)}
   .who .cols{grid-template-columns:1fr}
   .cta .wrap{grid-template-columns:1fr}
-  .qr-wrap{display:none}
+  .qr-wrap{justify-self:start}
+  .qr-big{width:13rem}
 }
 @media (max-width:720px){
+  body::before{display:none}
+  .top{backdrop-filter:none;-webkit-backdrop-filter:none;background:rgba(244,236,216,.96)}
+  .phone.a,.phone.b,.phones .seal svg.ring{animation:none}
   .qr-card{display:none}
   .features .grid{grid-template-columns:1fr}
   .features .grid .card:nth-child(even){margin-top:0}
@@ -267,7 +271,7 @@ footer .brand{font-size:.78rem}
     </div>
     <div class="phones rise d3" aria-hidden="false">
       <div class="phone b"><img src="/img/shot3.webp" alt="{{phone_alt_3d}}" width="600" height="1298" loading="eager"></div>
-      <div class="phone a"><img src="/img/shot1.webp" alt="{{phone_alt_map}}" width="600" height="1298" loading="eager"></div>
+      <div class="phone a"><img src="/img/shot1.webp" alt="{{phone_alt_map}}" width="600" height="1298" loading="eager" fetchpriority="high"></div>
       <div class="seal" aria-hidden="true">
         <svg class="ring" viewBox="0 0 100 100"><defs><path id="c" d="M50,50 m-36,0 a36,36 0 1,1 72,0 a36,36 0 1,1 -72,0"/></defs><text font-family="Cinzel,Georgia,serif" font-size="8.6" letter-spacing="1.6" fill="#a37f2c" font-weight="700"><textPath href="#c">ZWIEDZAJ · DOLNY ŚLĄSK · 3D · </textPath></text></svg><svg viewBox="0 0 100 100"><path d="M36 64 L46 38 L54 52 L58 44 L64 64 Z" fill="none" stroke="#2f8a5b" stroke-width="3.5" stroke-linejoin="round"/></svg>
       </div>

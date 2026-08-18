@@ -1,0 +1,12 @@
+[
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.pdw.zds",
+      "sha256_cert_fingerprints": [
+        "B9:1A:B5:B0:67:F7:42:32:15:C1:C5:A4:DA:53:BF:EE:23:0F:C1:66:32:E6:01:DC:5C:F1:A0:75:7A:43:19:D2"
+      ]
+    }
+  }
+]
