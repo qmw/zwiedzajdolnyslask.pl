@@ -33,13 +33,11 @@ The QR code (in `public/qr/`) encodes **`https://zwiedzajdolnyslask.pl/app`** â€
 
 `/app` is handled by Vercel redirects (server-side, no JavaScript, works from any QR scanner or camera app):
 
-| Visitor                       | Goes to                                  |
-|-------------------------------|------------------------------------------|
-| iPhone / iPad / iPod          | App Store page of the app                |
-| Android                       | Google Play page of the app              |
-| anything else, browser in DE  | `/de#pobierz`                            |
-| anything else, browser in EN  | `/en#pobierz`                            |
-| anything else                 | `/#pobierz` (PL landing page, download section) |
+| Visitor                                   | Goes to                                  |
+|-------------------------------------------|------------------------------------------|
+| iPhone / iPad / iPod (server-side, by UA) | App Store page of the app                |
+| Android phone (server-side, by UA)        | Google Play page of the app              |
+| everything else                           | `public/app/index.html` â€” a tiny JS check catches tablets that send a *desktop* UA (Chrome on Android tablets, iPad in desktop mode) via touch detection and sends them to the right store; real desktops go to the landing page (`/`, `/en` or `/de` by browser language, `#pobierz` section) |
 
 If the app is already installed, both stores show an **Open** button, so the QR "just works" for existing users too.
 

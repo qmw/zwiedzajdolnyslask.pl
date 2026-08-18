@@ -50,7 +50,7 @@ main,header,footer{position:relative;z-index:1}
 img,svg{max-width:100%;display:block}
 a{color:inherit}
 h1,h2,h3{margin:0;font-family:var(--serif);font-weight:600;letter-spacing:-.01em;line-height:1.05;text-wrap:balance}
-p{margin:0}
+p,blockquote{margin:0}
 .wrap{width:min(var(--w),calc(100% - 2.5rem));margin-inline:auto}
 .kicker{font-family:var(--caps);font-size:.68rem;letter-spacing:.18em;text-transform:uppercase;color:var(--gold-2);display:flex;align-items:center;gap:.8rem}
 .kicker::before{content:"";width:2.2rem;height:1px;background:var(--gold)}
@@ -156,6 +156,19 @@ section{padding:clamp(3rem,7vw,5.5rem) 0}
 .shelf .frame img{width:100%;height:100%;object-fit:cover}
 .shelf figcaption{margin-top:.8rem;font-size:.9rem;color:var(--ink-2);text-align:center;padding:0 .3rem}
 .shelf figure:nth-child(even){margin-top:2rem}
+
+/* reviews */
+.reviews .grid{display:grid;grid-template-columns:1fr 1fr;gap:1.6rem}
+.quote{position:relative;padding:2.2rem 2.2rem 1.8rem;background:rgba(255,252,244,.6);border:1px solid var(--line);border-radius:var(--r)}
+.quote::before{content:"\201E";position:absolute;top:-.6rem;left:1.4rem;font-family:var(--serif);font-size:6rem;line-height:1;color:var(--gold);opacity:.55}
+.stars{display:flex;gap:.15rem;color:var(--gold);margin-bottom:1rem}
+.stars svg{width:1.05rem;height:1.05rem}
+.quote p{font-family:var(--serif);font-size:1.45rem;line-height:1.35;font-weight:500;font-style:italic;color:var(--ink)}
+.quote footer{display:flex;align-items:center;gap:.7rem;margin-top:1.3rem;padding:0;font-size:.9rem;color:var(--ink-2)}
+.quote footer b{font-family:var(--sans);font-weight:700;color:var(--ink)}
+.quote footer .src{margin-left:auto;font-family:var(--caps);font-size:.62rem;letter-spacing:.16em;text-transform:uppercase;color:var(--ink-3);border:1px solid var(--line);border-radius:999px;padding:.3rem .7rem}
+.reviews .note{margin-top:1.4rem;font-size:.86rem;color:var(--ink-3)}
+@media (max-width:820px){.reviews .grid{grid-template-columns:1fr}}
 
 /* who */
 .who .cols{display:grid;grid-template-columns:repeat(3,1fr);gap:2rem}
@@ -288,7 +301,7 @@ footer .brand{font-size:.78rem}
       </article>
       <article class="card sr">
         <div class="num">IV</div>
-        <svg class="ico" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" aria-hidden="true"><path d="M24 42s-13-11-13-21a13 13 0 0 1 26 0c0 10-13 21-13 21z"/><rect x="18" y="19" width="12" height="9" rx="1.5"/><path d="M20.5 19v-2.5a3.5 3.5 0 0 1 7 0"/></svg>
+        <svg class="ico" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" aria-hidden="true"><path d="M6 22 20 10l14 12"/><path d="M10 20v18h20V20"/><path d="M17 38v-9h6v9"/><path d="M36 30a5 5 0 1 1 10 0c0 4-5 9-5 9s-5-5-5-9z"/><circle cx="41" cy="30" r="1.5" fill="currentColor" stroke="none"/></svg>
         <h3>{{f4_title}}</h3><p>{{f4_text}}</p>
       </article>
     </div>
@@ -325,6 +338,20 @@ footer .brand{font-size:.78rem}
       <figure><div class="frame"><img src="/img/shot4.webp" alt="{{g4_alt}}" width="600" height="1298" loading="lazy"></div><figcaption>{{g4_alt}}</figcaption></figure>
       <figure><div class="frame"><img src="/img/shot5.webp" alt="{{g5_alt}}" width="600" height="1298" loading="lazy"></div><figcaption>{{g5_alt}}</figcaption></figure>
     </div>
+  </div>
+</section>
+
+<section class="reviews" id="opinie">
+  <div class="wrap">
+    <div class="sec-head sr">
+      <p class="kicker">{{reviews_kicker}}</p>
+      <h2>{{reviews_title}}</h2>
+    </div>
+    <div class="grid">
+      <blockquote class="quote sr"><div class="stars" role="img" aria-label="{{stars_alt}}"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 2 2.9 6.6 7.1.7-5.4 4.8 1.6 7L12 17.4 5.8 21l1.6-7L2 9.3l7.1-.7z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 2 2.9 6.6 7.1.7-5.4 4.8 1.6 7L12 17.4 5.8 21l1.6-7L2 9.3l7.1-.7z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 2 2.9 6.6 7.1.7-5.4 4.8 1.6 7L12 17.4 5.8 21l1.6-7L2 9.3l7.1-.7z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 2 2.9 6.6 7.1.7-5.4 4.8 1.6 7L12 17.4 5.8 21l1.6-7L2 9.3l7.1-.7z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 2 2.9 6.6 7.1.7-5.4 4.8 1.6 7L12 17.4 5.8 21l1.6-7L2 9.3l7.1-.7z"/></svg></div><p>{{r1_text}}</p><footer><b>{{r1_name}}</b><span class="src">{{r1_source}}</span></footer></blockquote>
+      <blockquote class="quote sr"><div class="stars" role="img" aria-label="{{stars_alt}}"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 2 2.9 6.6 7.1.7-5.4 4.8 1.6 7L12 17.4 5.8 21l1.6-7L2 9.3l7.1-.7z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 2 2.9 6.6 7.1.7-5.4 4.8 1.6 7L12 17.4 5.8 21l1.6-7L2 9.3l7.1-.7z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 2 2.9 6.6 7.1.7-5.4 4.8 1.6 7L12 17.4 5.8 21l1.6-7L2 9.3l7.1-.7z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 2 2.9 6.6 7.1.7-5.4 4.8 1.6 7L12 17.4 5.8 21l1.6-7L2 9.3l7.1-.7z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 2 2.9 6.6 7.1.7-5.4 4.8 1.6 7L12 17.4 5.8 21l1.6-7L2 9.3l7.1-.7z"/></svg></div><p>{{r2_text}}</p><footer><b>{{r2_name}}</b><span class="src">{{r2_source}}</span></footer></blockquote>
+    </div>
+    <p class="note">{{reviews_note}}</p>
   </div>
 </section>
 

@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Zwiedzaj Dolny Śląsk — pobierz aplikację</title>
+<meta name="apple-itunes-app" content="app-id=6783342409">
+<link rel="icon" href="/favicon.png" type="image/png">
+<style>
+body{margin:0;min-height:100vh;display:grid;place-items:center;background:#f4ecd8;color:#2a1c12;font:400 1.05rem/1.5 "Alegreya Sans","Gill Sans",sans-serif;text-align:center}
+main{padding:2rem 1.5rem;max-width:26rem}
+img.icon{width:5rem;height:5rem;border-radius:1.2rem;margin:0 auto 1rem;box-shadow:0 10px 30px -14px rgba(42,28,18,.6)}
+h1{font:600 1.9rem/1.1 "Cormorant Garamond",Georgia,serif;margin:.4rem 0 .6rem}
+p{margin:0 0 1.4rem;color:#5a4536}
+.badges{display:flex;justify-content:center;gap:.8rem;flex-wrap:wrap}
+.badges img{height:52px;width:auto}
+.badges .play{margin:-8px}
+a.home{display:inline-block;margin-top:1.6rem;color:#8b7460;font-size:.9rem}
+</style>
+<script>
+// Server-side UA rules in vercel.json already handle phones. This page catches the rest:
+// tablets that send a desktop UA (Chrome on Android tablets = "X11; Linux", iPad = "Macintosh").
+(function () {
+  var APP_STORE = "https://apps.apple.com/pl/app/id6783342409";
+  var PLAY = "https://play.google.com/store/apps/details?id=com.pdw.zds";
+  var ua = navigator.userAgent, touch = navigator.maxTouchPoints > 0;
+  var ios = /iPhone|iPad|iPod/.test(ua) || (/Macintosh/.test(ua) && touch);
+  var android = /Android/.test(ua) || (/Linux/.test(ua) && !/Windows|CrOS/.test(ua) && touch);
+  var lang = (navigator.language || "pl").slice(0, 2);
+  var landing = (lang === "de" ? "/de" : lang === "en" ? "/en" : "/") + "#pobierz";
+  location.replace(ios ? APP_STORE : android ? PLAY : landing);
+})();
+</script>
+</head>
+<body>
+<main>
+  <img class="icon" src="/img/icon-512.png" alt="">
+  <h1>Zwiedzaj Dolny Śląsk</h1>
+  <p>Wybierz swój sklep · Choose your store · Wähle deinen Store</p>
+  <div class="badges">
+    <a href="https://apps.apple.com/pl/app/id6783342409"><img src="/img/badge-appstore-pl.svg" alt="App Store" width="156" height="52"></a>
+    <a href="https://play.google.com/store/apps/details?id=com.pdw.zds"><img class="play" src="/img/badge-play-pl.png" alt="Google Play" width="646" height="250"></a>
+  </div>
+  <a class="home" href="/">zwiedzajdolnyslask.pl</a>
+</main>
+</body>
+</html>

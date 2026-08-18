@@ -7,34 +7,38 @@
   "redirects": [
     {
       "source": "/app",
-      "has": [{ "type": "header", "key": "user-agent", "value": ".*(iPhone|iPad|iPod).*" }],
+      "has": [
+        {
+          "type": "header",
+          "key": "user-agent",
+          "value": ".*(iPhone|iPad|iPod).*"
+        }
+      ],
       "destination": "https://apps.apple.com/pl/app/id6783342409",
       "permanent": false
     },
     {
       "source": "/app",
-      "has": [{ "type": "header", "key": "user-agent", "value": ".*Android.*" }],
+      "has": [
+        {
+          "type": "header",
+          "key": "user-agent",
+          "value": ".*Android.*"
+        }
+      ],
       "destination": "https://play.google.com/store/apps/details?id=com.pdw.zds",
       "permanent": false
-    },
-    {
-      "source": "/app",
-      "has": [{ "type": "header", "key": "accept-language", "value": "de.*" }],
-      "destination": "/de#pobierz",
-      "permanent": false
-    },
-    {
-      "source": "/app",
-      "has": [{ "type": "header", "key": "accept-language", "value": "en.*" }],
-      "destination": "/en#pobierz",
-      "permanent": false
-    },
-    { "source": "/app", "destination": "/#pobierz", "permanent": false }
+    }
   ],
   "headers": [
     {
       "source": "/(img|qr)/(.*)",
-      "headers": [{ "key": "Cache-Control", "value": "public, max-age=604800, stale-while-revalidate=86400" }]
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=604800, stale-while-revalidate=86400"
+        }
+      ]
     }
   ]
 }
