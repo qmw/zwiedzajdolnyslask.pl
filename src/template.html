@@ -1,0 +1,381 @@
+<!doctype html>
+<html lang="{{htmlLang}}">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{{title}}</title>
+<meta name="description" content="{{metaDescription}}">
+<link rel="canonical" href="https://zwiedzajdolnyslask.pl{{path}}">
+<link rel="alternate" hreflang="pl" href="https://zwiedzajdolnyslask.pl/">
+<link rel="alternate" hreflang="en" href="https://zwiedzajdolnyslask.pl/en">
+<link rel="alternate" hreflang="de" href="https://zwiedzajdolnyslask.pl/de">
+<link rel="alternate" hreflang="x-default" href="https://zwiedzajdolnyslask.pl/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Zwiedzaj Dolny Śląsk">
+<meta property="og:title" content="{{title}}">
+<meta property="og:description" content="{{metaDescription}}">
+<meta property="og:url" content="https://zwiedzajdolnyslask.pl{{path}}">
+<meta property="og:image" content="https://zwiedzajdolnyslask.pl/img/og.jpg">
+<meta property="og:locale" content="{{ogLocale}}">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#f4ecd8">
+<meta name="apple-itunes-app" content="app-id=6783342409">
+<link rel="icon" href="/favicon.png" type="image/png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Alegreya+Sans:ital,wght@0,400;0,500;0,700;1,400&family=Cinzel:wght@500;700&family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"MobileApplication","name":"Zwiedzaj Dolny Śląsk","operatingSystem":"iOS, Android","applicationCategory":"TravelApplication","offers":{"@type":"Offer","price":"0","priceCurrency":"PLN"},"author":{"@type":"Organization","name":"PDW Sp. z o.o.","url":"https://zwiedzajdolnyslask.pl/"},"installUrl":["https://apps.apple.com/pl/app/id6783342409","https://play.google.com/store/apps/details?id=com.pdw.zds"],"image":"https://zwiedzajdolnyslask.pl/img/icon-512.png","description":"{{metaDescription}}"}
+</script>
+<style>
+:root{
+  --paper:#f4ecd8;--paper-2:#ebdfc3;--paper-3:#e2d3ae;
+  --ink:#2a1c12;--ink-2:#5a4536;--ink-3:#8b7460;
+  --green:#2f8a5b;--green-2:#256f49;--gold:#c49a3c;--gold-2:#a37f2c;--red:#a83a2c;
+  --line:rgba(42,28,18,.18);
+  --serif:"Cormorant Garamond",Georgia,"Times New Roman",serif;
+  --caps:"Cinzel",Georgia,serif;
+  --sans:"Alegreya Sans","Gill Sans","Trebuchet MS",sans-serif;
+  --w:1180px;--r:1.6rem;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--paper);color:var(--ink);font:400 1.0625rem/1.55 var(--sans);overflow-x:hidden}
+body::before{content:"";position:fixed;inset:0;z-index:0;pointer-events:none;opacity:.55;mix-blend-mode:multiply;
+  background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='240' height='240'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 .55 0 0 0 0 .45 0 0 0 0 .3 0 0 0 .18 0'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>")}
+body::after{content:"";position:fixed;inset:0;z-index:0;pointer-events:none;
+  background:radial-gradient(1100px 600px at 85% -10%,rgba(196,154,60,.22),transparent 60%),radial-gradient(900px 700px at -10% 110%,rgba(47,138,91,.16),transparent 60%)}
+main,header,footer{position:relative;z-index:1}
+img,svg{max-width:100%;display:block}
+a{color:inherit}
+h1,h2,h3{margin:0;font-family:var(--serif);font-weight:600;letter-spacing:-.01em;line-height:1.05;text-wrap:balance}
+p{margin:0}
+.wrap{width:min(var(--w),calc(100% - 2.5rem));margin-inline:auto}
+.kicker{font-family:var(--caps);font-size:.68rem;letter-spacing:.18em;text-transform:uppercase;color:var(--gold-2);display:flex;align-items:center;gap:.8rem}
+.kicker::before{content:"";width:2.2rem;height:1px;background:var(--gold)}
+.skip{position:absolute;left:-999px;top:0;background:var(--ink);color:var(--paper);padding:.6rem 1rem;z-index:99}
+.skip:focus{left:1rem;top:1rem}
+
+/* header */
+.top{position:sticky;top:0;z-index:20;backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);background:rgba(244,236,216,.82);border-bottom:1px solid var(--line)}
+.top .wrap{display:flex;align-items:center;gap:1.4rem;min-height:4.2rem}
+.brand{display:flex;align-items:center;gap:.7rem;text-decoration:none;font-family:var(--caps);font-size:.86rem;letter-spacing:.08em;font-weight:700}
+.brand img{width:2.1rem;height:2.1rem;border-radius:.55rem;box-shadow:0 1px 0 rgba(255,255,255,.7) inset,0 2px 6px rgba(42,28,18,.18)}
+.brand span{white-space:nowrap}
+.brand span b{color:var(--green)}
+.nav{display:flex;gap:1.6rem;margin-left:auto;font-weight:500;font-size:.98rem}
+.nav a{text-decoration:none;color:var(--ink-2)}
+.nav a:hover{color:var(--ink)}
+.lang{display:flex;gap:.15rem;margin-left:1.2rem;font-family:var(--caps);font-size:.72rem;letter-spacing:.12em}
+.lang a{text-decoration:none;padding:.35rem .5rem;border-radius:.4rem;color:var(--ink-3)}
+.lang a[aria-current]{color:var(--paper);background:var(--ink)}
+.lang a:not([aria-current]):hover{color:var(--ink);background:var(--paper-3)}
+@media (max-width:820px){.nav a:not(.nav-get){display:none}.nav{margin-left:auto}.lang{margin-left:.5rem}}
+@media (max-width:600px){.nav{display:none}.lang{margin-left:auto}}
+
+/* hero */
+.hero{padding:clamp(3rem,7vw,6rem) 0 clamp(3rem,6vw,5rem)}
+.hero .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:clamp(2rem,5vw,4rem);align-items:center}
+.hero .wrap>*{min-width:0}
+.hero h1{font-size:clamp(2.7rem,6.2vw,5.4rem);margin:1.1rem 0 1.4rem;font-weight:600}
+.hero h1 em{font-style:italic;color:var(--green);font-weight:500}
+.lede{font-size:clamp(1.1rem,1.6vw,1.3rem);color:var(--ink-2);max-width:36rem;line-height:1.5}
+.get{display:flex;align-items:center;flex-wrap:wrap;gap:1.2rem 1.6rem;margin-top:2rem}
+.badges{display:flex;gap:.8rem;flex-wrap:wrap}
+.badges a{display:block;transition:transform .2s ease,filter .2s ease}
+.badges a:hover{transform:translateY(-2px)}
+.badges img{height:52px;width:auto}
+.badges .play{height:52px;margin:-8px}
+.qr-card{text-decoration:none;display:flex;align-items:center;gap:1rem;padding:.8rem 1.1rem .8rem .8rem;background:rgba(255,252,244,.75);border:1px solid var(--line);border-radius:1rem;box-shadow:0 10px 30px -18px rgba(42,28,18,.5)}
+.qr-card img{width:5.4rem;height:5.4rem;border-radius:.5rem;background:#fff;padding:.25rem}
+.qr-card b{display:block;font-family:var(--serif);font-size:1.25rem;font-weight:700;line-height:1.1}
+.qr-card small{display:block;color:var(--ink-2);font-size:.86rem;line-height:1.35;max-width:14rem;margin-top:.2rem}
+.qr-card .kicker{margin-bottom:.25rem;font-size:.6rem}
+.qr-card .kicker::before{width:1rem}
+.stats{display:flex;flex-wrap:wrap;gap:1.4rem 2.4rem;margin-top:2.4rem;padding-top:1.4rem;border-top:1px solid var(--line)}
+.stats div{font-family:var(--caps);font-size:.66rem;letter-spacing:.18em;text-transform:uppercase;color:var(--ink-3)}
+.stats b{display:block;font-family:var(--serif);font-size:1.9rem;letter-spacing:0;text-transform:none;color:var(--ink);font-weight:700;line-height:1;margin-bottom:.35rem}
+.stats b.g{color:var(--green)}
+
+.phones{position:relative;height:clamp(24rem,44vw,36rem);justify-self:end;width:100%;max-width:30rem}
+.phone{position:absolute;width:clamp(11rem,20vw,15.5rem);aspect-ratio:600/1298;border-radius:2.2rem;border:6px solid #1d1510;background:#1d1510;box-shadow:0 30px 60px -20px rgba(42,28,18,.55),0 0 0 1px rgba(255,255,255,.08) inset;overflow:hidden}
+.phone img{width:100%;height:100%;object-fit:cover}
+.phone::after{content:"";position:absolute;top:0;left:50%;transform:translateX(-50%);width:34%;height:1.1rem;background:#1d1510;border-radius:0 0 .8rem .8rem}
+.phone.a{right:0;bottom:0;z-index:2;animation:float 7s ease-in-out infinite}
+.phone.b{left:0;top:0;transform:rotate(-7deg);z-index:1;opacity:.96;animation:float2 9s ease-in-out infinite}
+.phones .seal{position:absolute;left:38%;bottom:-1rem;z-index:3;width:6.2rem;height:6.2rem;border-radius:50%;background:var(--paper);border:1px solid var(--gold);display:grid;place-items:center;box-shadow:0 12px 30px -14px rgba(42,28,18,.6)}
+.phones .seal svg{width:100%;height:100%;grid-area:1/1}
+.phones .seal svg.ring{animation:spin 40s linear infinite}
+@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
+@keyframes float2{0%,100%{transform:rotate(-7deg) translateY(0)}50%{transform:rotate(-7deg) translateY(-14px)}}
+@keyframes spin{to{transform:rotate(360deg)}}
+
+/* reveal */
+.rise{animation:rise .9s cubic-bezier(.2,.7,.2,1) both}
+.d1{animation-delay:.08s}.d2{animation-delay:.18s}.d3{animation-delay:.3s}.d4{animation-delay:.42s}.d5{animation-delay:.55s}.d6{animation-delay:.7s}
+@keyframes rise{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}
+@supports (animation-timeline:view()){
+  .sr{animation:rise linear backwards;animation-timeline:view();animation-range:entry 0% entry 35%}
+}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+
+/* sections */
+section{padding:clamp(3rem,7vw,5.5rem) 0}
+.sec-head{max-width:40rem;margin-bottom:clamp(1.8rem,4vw,3rem)}
+.sec-head h2{font-size:clamp(2rem,4vw,3.2rem);margin-top:.8rem}
+.rule{height:1px;background:linear-gradient(90deg,transparent,var(--gold) 20%,var(--gold) 80%,transparent);opacity:.7}
+
+/* features */
+.features .grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1.4rem}
+.card{position:relative;padding:2rem 2rem 2rem 2.2rem;background:rgba(255,252,244,.55);border:1px solid var(--line);border-radius:var(--r);transition:transform .25s ease,box-shadow .25s ease,background .25s ease}
+.card::before{content:"";position:absolute;inset:.45rem;border:1px solid rgba(196,154,60,.35);border-radius:calc(var(--r) - .45rem);pointer-events:none}
+.card:hover{transform:translateY(-4px);box-shadow:0 26px 40px -30px rgba(42,28,18,.55);background:rgba(255,252,244,.85)}
+.card .num{font-family:var(--caps);color:var(--gold-2);font-size:.8rem;letter-spacing:.2em}
+.card .ico{width:2.6rem;height:2.6rem;color:var(--green);margin:1rem 0 1.1rem}
+.card h3{font-size:1.75rem;margin-bottom:.6rem}
+.card p{color:var(--ink-2)}
+.features .grid .card:nth-child(even){margin-top:1.4rem}
+
+/* places */
+.places{background:linear-gradient(180deg,transparent,rgba(226,211,174,.45) 20%,rgba(226,211,174,.45) 80%,transparent)}
+.route{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(5,1fr);gap:1.2rem;position:relative;counter-reset:p}
+.route::before{content:"";position:absolute;left:4%;right:4%;top:1.35rem;border-top:2px dashed rgba(139,116,96,.55);z-index:0}
+.route li{position:relative;z-index:1;counter-increment:p;padding-top:3.6rem}
+.route li::before{content:counter(p);position:absolute;top:0;left:0;width:2.7rem;height:2.7rem;border-radius:50%;background:var(--paper);border:2px solid var(--gold);color:var(--ink);font-family:var(--caps);font-weight:700;display:grid;place-items:center;font-size:.9rem;box-shadow:0 0 0 6px var(--paper),0 6px 14px -8px rgba(42,28,18,.5)}
+.route li:nth-child(odd)::before{background:var(--green);color:#fff;border-color:var(--green)}
+.route h3{font-size:1.5rem;margin-bottom:.35rem}
+.route p{color:var(--ink-2);font-size:.98rem}
+.more{margin-top:2.4rem;font-family:var(--serif);font-style:italic;font-size:1.3rem;color:var(--ink-2)}
+
+/* gallery */
+.shelf{--gutter:max(1.25rem,(100vw - var(--w))/2);display:flex;gap:1.4rem;overflow-x:auto;scroll-snap-type:x mandatory;margin-inline:calc(-1*var(--gutter));padding:1rem var(--gutter) 1.6rem;scroll-padding-inline:var(--gutter);scrollbar-width:thin;scrollbar-color:var(--gold) transparent;-webkit-overflow-scrolling:touch}
+.shelf figure{margin:0;flex:0 0 auto;width:clamp(11rem,17vw,13rem);scroll-snap-align:start;transition:transform .35s ease}
+.shelf figure:hover{transform:translateY(-8px) rotate(-1deg)}
+.shelf .frame{aspect-ratio:600/1298;border-radius:2rem;border:5px solid #1d1510;background:#1d1510;overflow:hidden;box-shadow:0 24px 40px -24px rgba(42,28,18,.6)}
+.shelf .frame img{width:100%;height:100%;object-fit:cover}
+.shelf figcaption{margin-top:.8rem;font-size:.9rem;color:var(--ink-2);text-align:center;padding:0 .3rem}
+.shelf figure:nth-child(even){margin-top:2rem}
+
+/* who */
+.who .cols{display:grid;grid-template-columns:repeat(3,1fr);gap:2rem}
+.who h3{font-size:1.9rem;font-style:italic;font-weight:500;margin-bottom:.5rem}
+.who h3::before{content:"—";color:var(--gold);margin-right:.5rem}
+.who p{color:var(--ink-2)}
+
+/* cta */
+.cta{background:var(--ink);color:var(--paper);position:relative;overflow:hidden}
+.cta::before{content:"";position:absolute;inset:0;background:radial-gradient(800px 400px at 50% 120%,rgba(196,154,60,.25),transparent 60%);pointer-events:none}
+.cta .wrap{position:relative;display:grid;grid-template-columns:1fr auto;gap:3rem;align-items:center}
+.cta .kicker{color:var(--gold)}
+.cta h2{font-size:clamp(2.2rem,4.5vw,3.6rem);margin:.8rem 0 1rem;color:#fff}
+.cta p{color:rgba(244,236,216,.8);max-width:34rem;font-size:1.1rem}
+.cta .badges{margin-top:1.8rem}
+.qr-big{position:relative;background:#fff;padding:1.2rem;border-radius:1.2rem;width:16rem;box-shadow:0 30px 60px -20px rgba(0,0,0,.6)}
+.qr-big img{width:100%;height:auto}
+.qr-big i{position:absolute;width:1.4rem;height:1.4rem;border:3px solid var(--gold);border-radius:2px}
+.qr-big i:nth-child(1){top:-.7rem;left:-.7rem;border-right:0;border-bottom:0}
+.qr-big i:nth-child(2){top:-.7rem;right:-.7rem;border-left:0;border-bottom:0}
+.qr-big i:nth-child(3){bottom:-.7rem;left:-.7rem;border-right:0;border-top:0}
+.qr-big i:nth-child(4){bottom:-.7rem;right:-.7rem;border-left:0;border-top:0}
+.qr-cap{text-align:center;margin-top:1rem;font-family:var(--caps);font-size:.7rem;letter-spacing:.18em;color:var(--gold)}
+.qr-cap a{text-decoration:none}
+
+/* footer */
+footer{padding:2.4rem 0 3rem;font-size:.9rem;color:var(--ink-2)}
+footer .wrap{display:grid;gap:.9rem}
+footer .row{display:flex;flex-wrap:wrap;gap:.6rem 1.6rem;align-items:center}
+footer .row a{color:var(--ink-2)}
+footer .fine{font-size:.78rem;color:var(--ink-3);max-width:60rem}
+footer .brand{font-size:.78rem}
+
+@media (max-width:980px){
+  .hero .wrap{grid-template-columns:1fr}
+  .phones{justify-self:center;max-width:26rem;height:clamp(22rem,70vw,30rem);margin-top:1rem}
+  .phone{width:clamp(10rem,32vw,13.5rem)}
+  .who .cols{grid-template-columns:1fr}
+  .cta .wrap{grid-template-columns:1fr}
+  .qr-wrap{display:none}
+}
+@media (max-width:720px){
+  .qr-card{display:none}
+  .features .grid{grid-template-columns:1fr}
+  .features .grid .card:nth-child(even){margin-top:0}
+  .route{grid-template-columns:1fr;gap:1.6rem;padding-left:0}
+  .route::before{left:1.3rem;top:1rem;bottom:1rem;right:auto;border-top:0;border-left:2px dashed rgba(139,116,96,.55)}
+  .route li{padding-top:0;padding-left:4rem;min-height:2.7rem}
+  .stats{gap:1.4rem}
+  .stats b{font-size:1.5rem}
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">{{skip}}</a>
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="{{path}}"><img src="/img/icon-512.png" width="512" height="512" alt=""><span>Zwiedzaj <b>Dolny Śląsk</b></span></a>
+    <nav class="nav" aria-label="Menu">
+      <a href="#funkcje">{{nav_features}}</a>
+      <a href="#miejsca">{{nav_places}}</a>
+      <a href="#galeria">{{nav_gallery}}</a>
+      <a class="nav-get" href="#pobierz">{{nav_get}}</a>
+    </nav>
+    <nav class="lang" aria-label="{{lang_label}}">
+      <a href="/" hreflang="pl" lang="pl"{{active_pl}}>PL</a>
+      <a href="/en" hreflang="en" lang="en"{{active_en}}>EN</a>
+      <a href="/de" hreflang="de" lang="de"{{active_de}}>DE</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+<section class="hero">
+  <div class="wrap">
+    <div>
+      <p class="kicker rise d1">{{eyebrow}}</p>
+      <h1 class="rise d2">{{h1_a}} <em>{{h1_b}}</em></h1>
+      <p class="lede rise d3">{{lede}}</p>
+      <div class="get rise d4">
+        <div class="badges">
+          <a href="https://apps.apple.com/pl/app/id6783342409" rel="noopener"><img src="/img/badge-appstore-{{lang}}.svg" alt="{{badge_appstore_alt}}" width="156" height="52"></a>
+          <a href="https://play.google.com/store/apps/details?id=com.pdw.zds&hl={{lang}}" rel="noopener"><img class="play" src="/img/badge-play-{{lang}}.png" alt="{{badge_play_alt}}" width="646" height="250"></a>
+        </div>
+        <a class="qr-card" href="#pobierz" aria-label="{{qr_title}}">
+          <img src="/qr/zwiedzajdolnyslask-app.svg" alt="{{qr_alt}}" width="41" height="41">
+          <span><span class="kicker">{{qr_kicker}}</span><b>{{qr_title}}</b><small>{{qr_text}}</small></span>
+        </a>
+      </div>
+      <div class="stats rise d5">
+        <div><b>{{stat_places_n}}</b>{{stat_places}}</div>
+        <div><b class="g">{{stat_free_v}}</b>{{stat_free}}</div>
+        <div><b>3D</b>360°</div>
+        <div><b>{{stat_lang_v}}</b>{{stat_lang}}</div>
+      </div>
+    </div>
+    <div class="phones rise d3" aria-hidden="false">
+      <div class="phone b"><img src="/img/shot3.webp" alt="{{phone_alt_3d}}" width="600" height="1298" loading="eager"></div>
+      <div class="phone a"><img src="/img/shot1.webp" alt="{{phone_alt_map}}" width="600" height="1298" loading="eager"></div>
+      <div class="seal" aria-hidden="true">
+        <svg class="ring" viewBox="0 0 100 100"><defs><path id="c" d="M50,50 m-36,0 a36,36 0 1,1 72,0 a36,36 0 1,1 -72,0"/></defs><text font-family="Cinzel,Georgia,serif" font-size="8.6" letter-spacing="1.6" fill="#a37f2c" font-weight="700"><textPath href="#c">ZWIEDZAJ · DOLNY ŚLĄSK · 3D · </textPath></text></svg><svg viewBox="0 0 100 100"><path d="M36 64 L46 38 L54 52 L58 44 L64 64 Z" fill="none" stroke="#2f8a5b" stroke-width="3.5" stroke-linejoin="round"/></svg>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="wrap"><div class="rule"></div></div>
+
+<section class="features" id="funkcje">
+  <div class="wrap">
+    <div class="sec-head sr">
+      <p class="kicker">{{features_kicker}}</p>
+      <h2>{{features_title}}</h2>
+    </div>
+    <div class="grid">
+      <article class="card sr">
+        <div class="num">I</div>
+        <svg class="ico" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" aria-hidden="true"><path d="M24 6 42 15v18L24 42 6 33V15z"/><path d="M6 15l18 9 18-9M24 24v18"/><path d="M15 10.5 33 19.5"/></svg>
+        <h3>{{f1_title}}</h3><p>{{f1_text}}</p>
+      </article>
+      <article class="card sr">
+        <div class="num">II</div>
+        <svg class="ico" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" aria-hidden="true"><rect x="6" y="10" width="36" height="28" rx="2"/><path d="M24 10v28M6 30l7-8 6 6 5-6 6 8"/><path d="M24 30l5-6 6 8 7-8" opacity=".45"/></svg>
+        <h3>{{f2_title}}</h3><p>{{f2_text}}</p>
+      </article>
+      <article class="card sr">
+        <div class="num">III</div>
+        <svg class="ico" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" aria-hidden="true"><path d="M8 28v-4a16 16 0 0 1 32 0v4"/><rect x="6" y="26" width="8" height="12" rx="2"/><rect x="34" y="26" width="8" height="12" rx="2"/><path d="M21 21v10l8-5z" fill="currentColor" stroke="none"/></svg>
+        <h3>{{f3_title}}</h3><p>{{f3_text}}</p>
+      </article>
+      <article class="card sr">
+        <div class="num">IV</div>
+        <svg class="ico" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" aria-hidden="true"><path d="M24 42s-13-11-13-21a13 13 0 0 1 26 0c0 10-13 21-13 21z"/><rect x="18" y="19" width="12" height="9" rx="1.5"/><path d="M20.5 19v-2.5a3.5 3.5 0 0 1 7 0"/></svg>
+        <h3>{{f4_title}}</h3><p>{{f4_text}}</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="places" id="miejsca">
+  <div class="wrap">
+    <div class="sec-head sr">
+      <p class="kicker">{{places_kicker}}</p>
+      <h2>{{places_title}}</h2>
+    </div>
+    <ol class="route sr">
+      <li><h3>{{p1_name}}</h3><p>{{p1_text}}</p></li>
+      <li><h3>{{p2_name}}</h3><p>{{p2_text}}</p></li>
+      <li><h3>{{p3_name}}</h3><p>{{p3_text}}</p></li>
+      <li><h3>{{p4_name}}</h3><p>{{p4_text}}</p></li>
+      <li><h3>{{p5_name}}</h3><p>{{p5_text}}</p></li>
+    </ol>
+    <p class="more sr">{{places_more}}</p>
+  </div>
+</section>
+
+<section class="gallery" id="galeria">
+  <div class="wrap">
+    <div class="sec-head sr">
+      <p class="kicker">{{gallery_kicker}}</p>
+      <h2>{{gallery_title}}</h2>
+    </div>
+    <div class="shelf">
+      <figure><div class="frame"><img src="/img/shot1.webp" alt="{{g1_alt}}" width="600" height="1298" loading="lazy"></div><figcaption>{{g1_alt}}</figcaption></figure>
+      <figure><div class="frame"><img src="/img/shot2.webp" alt="{{g2_alt}}" width="600" height="1298" loading="lazy"></div><figcaption>{{g2_alt}}</figcaption></figure>
+      <figure><div class="frame"><img src="/img/shot3.webp" alt="{{g3_alt}}" width="600" height="1298" loading="lazy"></div><figcaption>{{g3_alt}}</figcaption></figure>
+      <figure><div class="frame"><img src="/img/shot4.webp" alt="{{g4_alt}}" width="600" height="1298" loading="lazy"></div><figcaption>{{g4_alt}}</figcaption></figure>
+      <figure><div class="frame"><img src="/img/shot5.webp" alt="{{g5_alt}}" width="600" height="1298" loading="lazy"></div><figcaption>{{g5_alt}}</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<section class="who">
+  <div class="wrap">
+    <div class="sec-head sr">
+      <p class="kicker">{{who_kicker}}</p>
+      <h2>{{who_title}}</h2>
+    </div>
+    <div class="cols">
+      <div class="sr"><h3>{{w1_title}}</h3><p>{{w1_text}}</p></div>
+      <div class="sr"><h3>{{w2_title}}</h3><p>{{w2_text}}</p></div>
+      <div class="sr"><h3>{{w3_title}}</h3><p>{{w3_text}}</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="cta" id="pobierz">
+  <div class="wrap">
+    <div>
+      <p class="kicker">{{cta_kicker}}</p>
+      <h2>{{cta_title}}</h2>
+      <p>{{cta_text}}</p>
+      <div class="badges">
+        <a href="https://apps.apple.com/pl/app/id6783342409" rel="noopener"><img src="/img/badge-appstore-{{lang}}.svg" alt="{{badge_appstore_alt}}" width="156" height="52"></a>
+        <a href="https://play.google.com/store/apps/details?id=com.pdw.zds&hl={{lang}}" rel="noopener"><img class="play" src="/img/badge-play-{{lang}}.png" alt="{{badge_play_alt}}" width="646" height="250"></a>
+      </div>
+    </div>
+    <div class="qr-wrap">
+      <div class="qr-big"><i></i><i></i><i></i><i></i><img src="/qr/zwiedzajdolnyslask-app.svg" alt="{{qr_alt}}" width="41" height="41"></div>
+      <p class="qr-cap"><a href="/app">{{cta_qr_caption}}</a></p>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="row">
+      <a class="brand" href="{{path}}"><img src="/img/icon-512.png" width="512" height="512" alt=""><span>Zwiedzaj <b>Dolny Śląsk</b></span></a>
+      <span>{{footer_company}} · {{footer_address}}</span>
+    </div>
+    <div class="row">
+      <a href="mailto:pdw@pdw.wroc.pl">pdw@pdw.wroc.pl</a>
+      <a href="tel:+48508171828">+48 508 171 828</a>
+      <a href="https://projektdawnywroclaw.pl/polityka-prywatnosci" rel="noopener">{{footer_privacy}}</a>
+      <a href="https://projektdawnywroclaw.pl/" rel="noopener">{{footer_pdw}}</a>
+      <span class="lang" style="margin:0"><a href="/" hreflang="pl"{{active_pl}}>PL</a><a href="/en" hreflang="en"{{active_en}}>EN</a><a href="/de" hreflang="de"{{active_de}}>DE</a></span>
+    </div>
+    <p class="fine">© 2026 {{footer_company}} {{footer_rights}} {{footer_trademarks}}</p>
+  </div>
+</footer>
+</body>
+</html>
