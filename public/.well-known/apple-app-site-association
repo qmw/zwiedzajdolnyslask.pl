@@ -2,7 +2,7 @@
   "applinks": {
     "details": [
       {
-        "appIDs": ["3TRV764468.com.pdw.zds"],
+        "appIDs": ["82UN996V44.com.pdw.zds"],
         "components": [
           { "/": "/app", "comment": "smart QR link" },
           { "/": "/app/*" }
