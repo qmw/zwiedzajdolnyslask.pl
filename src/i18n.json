@@ -88,7 +88,11 @@
     "reviews_note": "Opinie ze sklepów App Store i Google Play.",
     "stars_alt": "5 na 5 gwiazdek",
     "share_btn": "Udostępnij link do aplikacji",
-    "share_text": "Zwiedzaj Dolny Śląsk — mobilny przewodnik historyczny z rekonstrukcjami 3D. Bezpłatnie na iOS i Androida:"
+    "share_text": "Zwiedzaj Dolny Śląsk — mobilny przewodnik historyczny z rekonstrukcjami 3D. Bezpłatnie na iOS i Androida:",
+    "cookie_text": "Używamy cookies do anonimowej statystyki odwiedzin (Google Analytics). Zgadzasz się?",
+    "cookie_more": "Polityka prywatności",
+    "cookie_accept": "Akceptuję",
+    "cookie_reject": "Nie teraz"
   },
   "en": {
     "path": "/en",
@@ -179,7 +183,11 @@
     "reviews_note": "Reviews from the App Store and Google Play, translated from Polish.",
     "stars_alt": "5 out of 5 stars",
     "share_btn": "Share the app link",
-    "share_text": "Zwiedzaj Dolny Śląsk — Lower Silesia history guide with 3D reconstructions. Free on iOS and Android:"
+    "share_text": "Zwiedzaj Dolny Śląsk — Lower Silesia history guide with 3D reconstructions. Free on iOS and Android:",
+    "cookie_text": "We use cookies for anonymous visit statistics (Google Analytics). Is that OK?",
+    "cookie_more": "Privacy policy",
+    "cookie_accept": "Accept",
+    "cookie_reject": "Not now"
   },
   "de": {
     "path": "/de",
@@ -270,6 +278,10 @@
     "reviews_note": "Bewertungen aus dem App Store und Google Play, aus dem Polnischen übersetzt.",
     "stars_alt": "5 von 5 Sternen",
     "share_btn": "App-Link teilen",
-    "share_text": "Zwiedzaj Dolny Śląsk — Geschichts-Guide für Niederschlesien mit 3D-Rekonstruktionen. Kostenlos für iOS und Android:"
+    "share_text": "Zwiedzaj Dolny Śląsk — Geschichts-Guide für Niederschlesien mit 3D-Rekonstruktionen. Kostenlos für iOS und Android:",
+    "cookie_text": "Wir nutzen Cookies für anonyme Besuchsstatistiken (Google Analytics). Einverstanden?",
+    "cookie_more": "Datenschutz",
+    "cookie_accept": "Akzeptieren",
+    "cookie_reject": "Jetzt nicht"
   }
 }
