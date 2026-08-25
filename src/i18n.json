@@ -24,7 +24,7 @@
     "phone_alt_map": "Ekran aplikacji: mapa Dolnego Śląska z punktami historycznymi",
     "phone_alt_3d": "Ekran aplikacji: rekonstrukcja 3D placu Wolności w Świdnicy",
     "stat_places": "miejscowości",
-    "stat_places_n": "5",
+    "stat_places_n": "6",
     "stat_free": "koszt",
     "stat_free_v": "0 zł",
     "stat_lang": "narracja",
@@ -40,7 +40,7 @@
     "f4_title": "Z kanapy albo w terenie",
     "f4_text": "Wszystkie punkty są otwarte od razu — możesz obejrzeć całą aplikację w domu, planując wycieczkę. Najwięcej frajdy daje jednak stanięcie w danym miejscu i porównanie tego, co widzisz, z tym, co było.",
     "places_kicker": "Dostępne lokalizacje",
-    "places_title": "Pięć miejsc, pięć epok",
+    "places_title": "Sześć miejsc, sześć epok",
     "places_more": "Kolejne miejscowości wkrótce.",
     "p1_name": "Wrocław",
     "p1_text": "Dawne oblicze stolicy regionu i jej najważniejsze zabytki.",
@@ -92,7 +92,9 @@
     "cookie_text": "Używamy cookies do anonimowej statystyki odwiedzin (Google Analytics). Zgadzasz się?",
     "cookie_more": "Polityka prywatności",
     "cookie_accept": "Akceptuję",
-    "cookie_reject": "Nie teraz"
+    "cookie_reject": "Nie teraz",
+    "p6_name": "Ząbkowice Śląskie",
+    "p6_text": "Krzywa Wieża, ruiny zamku i miasto, które przed wojną nazywało się Frankenstein."
   },
   "en": {
     "path": "/en",
@@ -119,7 +121,7 @@
     "phone_alt_map": "App screen: map of Lower Silesia with historic points",
     "phone_alt_3d": "App screen: 3D reconstruction of Freedom Square in Świdnica",
     "stat_places": "locations",
-    "stat_places_n": "5",
+    "stat_places_n": "6",
     "stat_free": "price",
     "stat_free_v": "free",
     "stat_lang": "narration",
@@ -135,7 +137,7 @@
     "f4_title": "From the sofa or on site",
     "f4_text": "Every point is open from the start — browse the whole app at home while planning a trip. The real fun, though, is standing on the spot and comparing what you see with what once was.",
     "places_kicker": "Available locations",
-    "places_title": "Five places, five eras",
+    "places_title": "Six places, six eras",
     "places_more": "More towns coming soon.",
     "p1_name": "Wrocław",
     "p1_text": "The former face of the regional capital and its key monuments.",
@@ -187,7 +189,9 @@
     "cookie_text": "We use cookies for anonymous visit statistics (Google Analytics). Is that OK?",
     "cookie_more": "Privacy policy",
     "cookie_accept": "Accept",
-    "cookie_reject": "Not now"
+    "cookie_reject": "Not now",
+    "p6_name": "Ząbkowice Śląskie",
+    "p6_text": "The Leaning Tower, castle ruins and the town once known as Frankenstein."
   },
   "de": {
     "path": "/de",
@@ -214,7 +218,7 @@
     "phone_alt_map": "App-Bildschirm: Karte Niederschlesiens mit historischen Punkten",
     "phone_alt_3d": "App-Bildschirm: 3D-Rekonstruktion des Freiheitsplatzes in Schweidnitz",
     "stat_places": "Orte",
-    "stat_places_n": "5",
+    "stat_places_n": "6",
     "stat_free": "Preis",
     "stat_free_v": "gratis",
     "stat_lang": "Erzählung",
@@ -230,7 +234,7 @@
     "f4_title": "Vom Sofa aus oder vor Ort",
     "f4_text": "Alle Punkte sind von Anfang an offen — du kannst die ganze App zu Hause durchstöbern und den Ausflug planen. Am meisten Spaß macht es aber, an Ort und Stelle zu stehen und das Heute mit dem Damals zu vergleichen.",
     "places_kicker": "Verfügbare Orte",
-    "places_title": "Fünf Orte, fünf Epochen",
+    "places_title": "Sechs Orte, sechs Epochen",
     "places_more": "Weitere Orte folgen in Kürze.",
     "p1_name": "Wrocław (Breslau)",
     "p1_text": "Das einstige Gesicht der Regionalhauptstadt und ihre wichtigsten Denkmäler.",
@@ -282,6 +286,8 @@
     "cookie_text": "Wir nutzen Cookies für anonyme Besuchsstatistiken (Google Analytics). Einverstanden?",
     "cookie_more": "Datenschutz",
     "cookie_accept": "Akzeptieren",
-    "cookie_reject": "Jetzt nicht"
+    "cookie_reject": "Jetzt nicht",
+    "p6_name": "Ząbkowice Śląskie (Frankenstein)",
+    "p6_text": "Der Schiefe Turm, die Schlossruine und die Stadt, die einst Frankenstein hieß."
   }
 }
