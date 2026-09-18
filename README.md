@@ -70,13 +70,13 @@ The QR code and the printed posters do not change.
 
 ## Bug report form — `#zglos-blad`
 
-A "Report a bug" section on every language version (also linked from the footer, so the app can link straight to `https://zwiedzajdolnyslask.pl/#zglos-blad`). Submissions are e-mailed to **pdw@pdw.wroc.pl**.
+A "Report a bug" section on every language version (also linked from the footer, so the app can link straight to `https://zwiedzajdolnyslask.pl/#zglos-blad`). Submissions are e-mailed to **zgloszenia@pdw.wroc.pl** (sent from pdw@pdw.wroc.pl, so a bounce would land in that mailbox).
 
 ```
-browser ── POST /api/zgloszenie ──> Vercel rewrite ──> https://pdw.wroc.pl/zgloszenie.php ──> PHP mail() ──> pdw@pdw.wroc.pl
+browser ── POST /api/zgloszenie ──> Vercel rewrite ──> https://pdw.wroc.pl/zgloszenie.php ──> PHP mail() ──> zgloszenia@pdw.wroc.pl
 ```
 
-- The handler lives on the LH.pl hosting of pdw.wroc.pl (same server that runs the pdw.wroc.pl mailbox, so no SMTP password or third-party mail service is needed and SPF passes). Source: `server/zgloszenie.php`; deploy it by FTPS upload to `public_html/pdw/zgloszenie.php`.
+- The handler lives on the LH.pl hosting of pdw.wroc.pl (same server that runs the pdw.wroc.pl mailboxes, so no SMTP password or third-party mail service is needed and SPF passes). Source: `server/zgloszenie.php`; deploy it by FTPS upload to `public_html/pdw/zgloszenie.php`.
 - The browser only ever sees `/api/zgloszenie` (rewrite in `vercel.json`), so the backend can be swapped later without touching the page.
 - Fields: system (iOS / Android / other), device, place in the app, description (required), reply e-mail (optional). The e-mail becomes `Reply-To`, so answering the report is just "Reply".
 - Spam protection: hidden honeypot field + minimum fill time. Server-side validation of every field; user input never reaches a mail header except a validated `Reply-To`.

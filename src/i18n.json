@@ -114,7 +114,7 @@
     "bug_send": "Wyślij zgłoszenie",
     "bug_sending": "Wysyłanie…",
     "bug_ok": "Dziękujemy! Zgłoszenie dotarło do nas.",
-    "bug_err": "Nie udało się wysłać. Spróbuj ponownie albo napisz na pdw@pdw.wroc.pl.",
+    "bug_err": "Nie udało się wysłać. Spróbuj ponownie albo napisz na zgloszenia@pdw.wroc.pl.",
     "bug_privacy": "Adres e-mail wykorzystamy wyłącznie do odpowiedzi na zgłoszenie. Administratorem danych jest PDW Sp. z o.o.",
     "footer_bug": "Zgłoś błąd"
   },
@@ -233,7 +233,7 @@
     "bug_send": "Send report",
     "bug_sending": "Sending…",
     "bug_ok": "Thank you! Your report has reached us.",
-    "bug_err": "Sending failed. Please try again or write to pdw@pdw.wroc.pl.",
+    "bug_err": "Sending failed. Please try again or write to zgloszenia@pdw.wroc.pl.",
     "bug_privacy": "We will use your e-mail address only to reply to this report. Data controller: PDW Sp. z o.o.",
     "footer_bug": "Report a bug"
   },
@@ -352,7 +352,7 @@
     "bug_send": "Meldung senden",
     "bug_sending": "Wird gesendet…",
     "bug_ok": "Danke! Deine Meldung ist bei uns angekommen.",
-    "bug_err": "Senden fehlgeschlagen. Bitte versuch es erneut oder schreib an pdw@pdw.wroc.pl.",
+    "bug_err": "Senden fehlgeschlagen. Bitte versuch es erneut oder schreib an zgloszenia@pdw.wroc.pl.",
     "bug_privacy": "Deine E-Mail-Adresse verwenden wir nur, um auf diese Meldung zu antworten. Verantwortlicher: PDW Sp. z o.o.",
     "footer_bug": "Fehler melden"
   }

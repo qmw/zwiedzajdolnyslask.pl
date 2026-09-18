@@ -1,11 +1,12 @@
 <?php
 // Bug-report form handler for https://zwiedzajdolnyslask.pl/#zglos-blad.
 // The page posts to /api/zgloszenie; vercel.json rewrites that to this file on the pdw.wroc.pl (LH.pl) hosting,
-// the same server that hosts the pdw@pdw.wroc.pl mailbox. Deployed at public_html/pdw/zgloszenie.php.
+// the same server that hosts the pdw.wroc.pl mailboxes. Deployed at public_html/pdw/zgloszenie.php.
 
 declare(strict_types=1);
 
-const TO = 'pdw@pdw.wroc.pl';
+const TO = 'zgloszenia@pdw.wroc.pl';
+const FROM = 'pdw@pdw.wroc.pl'; // existing mailbox, so bounces are visible
 const HOURLY_LIMIT = 30;
 
 ini_set('display_errors', '0');
@@ -86,12 +87,12 @@ $body = implode("\n", [
 ]);
 
 $headers = [
-    'From' => 'Formularz zwiedzajdolnyslask.pl <' . TO . '>',
+    'From' => 'Formularz zwiedzajdolnyslask.pl <' . FROM . '>',
     'MIME-Version' => '1.0',
     'Content-Type' => 'text/plain; charset=UTF-8',
     'Content-Transfer-Encoding' => 'quoted-printable',
 ];
 if ($email !== '') $headers['Reply-To'] = $email;
 
-$sent = mail(TO, '=?UTF-8?B?' . base64_encode($subject) . '?=', quoted_printable_encode($body), $headers, '-f' . TO);
+$sent = mail(TO, '=?UTF-8?B?' . base64_encode($subject) . '?=', quoted_printable_encode($body), $headers, '-f' . FROM);
 reply($sent ? 200 : 502, $sent ? 'ok' : 'send');
