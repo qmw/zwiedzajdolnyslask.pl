@@ -53,5 +53,11 @@
         }
       ]
     }
+  ],
+  "rewrites": [
+    {
+      "source": "/api/zgloszenie",
+      "destination": "https://pdw.wroc.pl/zgloszenie.php"
+    }
   ]
 }
